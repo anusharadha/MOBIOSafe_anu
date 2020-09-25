@@ -43,6 +43,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
         app:menu="@menu/activity_main_drawer"
         app:headerLayout="@layout/drawer_header"/>
 
