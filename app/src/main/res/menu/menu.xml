@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <item android:title="Location Tracking"
+        android:icon="@drawable/ic_locationtracking"
+        android:id="@+id/locationtracking"
+        app:showAsAction="ifRoom"/>
+    <item android:title="Bluetooth"
+        android:icon="@drawable/ic_bluetooth"
+        android:id="@+id/bluetooth"
+        app:showAsAction="ifRoom"/>
+    <item android:title="Phone"
+        android:icon="@drawable/ic_phone"
+        android:id="@+id/phone"
+        app:showAsAction="ifRoom"/>
+
+</menu>

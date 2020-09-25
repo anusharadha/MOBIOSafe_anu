@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/user_details_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="161dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/user"
+                android:layout_width="@dimen/card_view_image_width"
+                android:layout_height="@dimen/card_view_image_height"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:src="@mipmap/ic_user_new"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/user_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/user"
+                android:layout_toRightOf="@+id/user"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/user_name"
+                android:textColor="#000000"
+                android:textSize="@dimen/font_size_h1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/user"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.134" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sap_id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_name_text"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/sap_id"
+                android:textColor="#000000"
+                android:textSize="@dimen/font_size_h2"
+                app:layout_constraintEnd_toStartOf="@+id/gate_entry"
+                app:layout_constraintHorizontal_bias="0.063"
+                app:layout_constraintStart_toEndOf="@+id/user"
+                app:layout_constraintTop_toBottomOf="@+id/user_name_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/assessment_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/assessment_status"
+                android:textColor="#0067B6"
+                android:textSize="@dimen/font_size_h1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/assessment_taken_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/assessment_label"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/assessment_taken"
+                android:textColor="#000000"
+                android:textSize="@dimen/font_size_h2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/assessment_label" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gate_entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/user_name_text"
+                android:layout_toRightOf="@+id/user_name_text"
+                android:background="@drawable/ic_round_button"
+                android:text="@string/gate_entry_btn_text"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.931"
+                app:layout_constraintStart_toEndOf="@+id/user"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.141" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/scan_success"
+                android:layout_width="@dimen/card_view_image_width"
+                android:layout_height="@dimen/card_view_image_height"
+                android:layout_marginStart="48dp"
+                android:src="@mipmap/ic_scan_compeleted"
+                app:layout_constraintStart_toEndOf="@+id/assessment_taken_label"
+                app:layout_constraintTop_toBottomOf="@+id/gate_entry" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        android:id="@+id/scan_details_cardview"
+        app:layout_constraintTop_toBottomOf="@+id/user_details_cardview"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/device"
+                android:layout_width="@dimen/card_view_image_width"
+                android:layout_height="@dimen/card_view_image_height"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/ic_device_new"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/assessment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/device"
+                android:layout_toRightOf="@+id/device"
+                android:text="@string/nearby_devices"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/device"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/app_users_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/assessment_text"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/device"
+                android:layout_toRightOf="@+id/device"
+                android:text="@string/app_users"
+                android:textColor="#0067B6"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/device"
+                app:layout_constraintTop_toBottomOf="@+id/assessment_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/scan_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_users_text"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/device"
+                android:layout_toRightOf="@+id/device"
+                android:text="@string/scan_time_label"
+                android:textColor="#0067B6"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/device"
+                app:layout_constraintTop_toBottomOf="@+id/app_users_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/device_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32sp"
+                android:layout_toEndOf="@+id/assessment_text"
+                android:layout_toRightOf="@+id/assessment_text"
+                android:gravity="center"
+                android:text="@string/device_count"
+                android:textColor="#008000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.367"
+                app:layout_constraintStart_toEndOf="@+id/app_users_text"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="76dp"
+                android:text="@string/scan_time"
+                android:textColor="#0067B6"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/scan_time_text"
+                app:layout_constraintTop_toBottomOf="@+id/device_count_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        android:id="@+id/other_app_install_status"
+        app:layout_constraintTop_toBottomOf="@+id/scan_details_cardview"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aarogya_app"
+                android:layout_width="@dimen/card_view_image_width"
+                android:layout_height="@dimen/card_view_image_height"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/ic_aarogya_app"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/aarogya_app_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/aarogya_app"
+                android:layout_toRightOf="@+id/aarogya_app"
+                android:text="@string/aarogya_app_text"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/aarogya_app"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/aarogya_app_installed_status_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aarogya_app_text"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/aarogya_app"
+                android:layout_toRightOf="@+id/aarogya_app"
+                android:text="@string/aarogya_app_installed_status"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/aarogya_app"
+                app:layout_constraintTop_toBottomOf="@+id/aarogya_app_text" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/install_aarogya_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aarogya_app"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_round_button"
+                android:text="@string/install_btn_text"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.967"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.878" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

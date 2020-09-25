@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="imageapp.com.mobiosafe.DashboardFragment"
+        android:label="@string/app_name" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="imageapp.com.mobiosafe.HistoryFragment"
+        android:label="@string/frag_his" />
+    <fragment
+        android:id="@+id/healthtipsFragment"
+        android:name="imageapp.com.mobiosafe.HealthTipsFragment"
+        android:label="@string/frag_health_tips" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="imageapp.com.mobiosafe.SettingsFragment"
+        android:label="@string/frag_settings" />
+</navigation>
