@@ -1,7 +1,7 @@
 package imageapp.com.mobiosafe
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -38,6 +38,16 @@ class MainActivity : AppCompatActivity() {
         //var headerView:View = LayoutInflater.from(this).inflate(R.layout.drawer_header,null)
         //navigationView.addHeaderView(headerView)
         //navigationView.getHeaderView(0).setVisibility(View.GONE)
+    }
+
+    fun startService(v: View?) {
+        val serviceIntent = Intent(this, ForegroundService::class.java)
+        startService(serviceIntent)
+    }
+
+    fun stopService(v: View?) {
+        val serviceIntent = Intent(this, ForegroundService::class.java)
+        stopService(serviceIntent)
     }
 
     override fun onSupportNavigateUp(): Boolean {
