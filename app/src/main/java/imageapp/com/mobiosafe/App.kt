@@ -8,7 +8,7 @@ import android.os.Build
 class App : Application() {
 
     companion object{
-        var CHANNEL_ID = "exampleServiceChannel"
+        public final var CHANNEL_ID = "exampleServiceChannel"
     }
 
     override fun onCreate() {
@@ -22,7 +22,7 @@ class App : Application() {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             var serviceChannel = NotificationChannel(
                 CHANNEL_ID,
-                "Example Service Channel",
+                "Example Foreground Service Channel",
                 NotificationManager.IMPORTANCE_DEFAULT
             )
         val manager = getSystemService(
