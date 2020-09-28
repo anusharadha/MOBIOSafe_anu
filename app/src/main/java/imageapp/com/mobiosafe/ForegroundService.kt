@@ -8,10 +8,11 @@ import android.app.Service
 import android.content.Intent
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
+import imageapp.com.mobiosafe.App.Companion.CHANNEL_ID
 
 
 class ForegroundService:Service() {
-    public final var CHANNEL_ID = "exampleServiceChannel"
+    //public final var CHANNEL_ID = "exampleServiceChannel"
     override fun onCreate() {
         super.onCreate()
     }
@@ -23,7 +24,7 @@ class ForegroundService:Service() {
         //return super.onStartCommand(intent, flags, startId)
         val notificationIntent = Intent(this, MainActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0)
-        var notification:Notification = NotificationCompat.Builder(this, CHANNEL_ID)
+        var notification:Notification = NotificationCompat.Builder(this, App.CHANNEL_ID)
             .setContentTitle("Foreground Service")
             .setContentText("Sample Service")
             .setSmallIcon(R.drawable.ic_btn_speak_now)

@@ -6,7 +6,10 @@ import android.app.NotificationManager
 import android.os.Build
 
 class App : Application() {
-    public final var CHANNEL_ID = "exampleServiceChannel"
+
+    companion object{
+        var CHANNEL_ID = "exampleServiceChannel"
+    }
 
     override fun onCreate() {
         super.onCreate()
