@@ -54,4 +54,21 @@
     <string name="aarogya_app_installed_status">Your device does not have Aarogya Setu app installed. Please install to connect with the essential health care services.</string>
     <string name="install_btn_text">INSTALL</string>
     <string name="gate_entry_btn_text">GATE Entry</string>
+
+    <string name="hcl_text">HCL</string>
+    <string name="login_sub_heading_txt">Welcome to HCL MOBIOSafe</string>
+    <string name="covid_text">COVID-19: GATE ENTRY QUESTION\n \t\t\t\t\t\t\t\t\t\t\t\t\t\tTOOL</string>
+    <string name="submit_button_text">Submit</string>
+    <string name="radio_emp_txt">HCL Employee</string>
+    <string name="radio_third_part_txt">Third Party</string>
+    <string name="qn_take_ass_txt">Taking assessment for?</string>
+    <string name="qn_are_you">Are you?</string>
+    <string name="ans_self">Self</string>
+    <string name="ans_on_behalf">On Behalf</string>
+    <string name="qn3_txt">Do you currently reside in a declared COVID-19 Hotspot Area / COVID-19 Containment zone or have gone there during the last 14 days?</string>
+    <string name="ans_yes_txt">Yes</string>
+    <string name="ans_no_txt">No</string>
+    <string name="submit_btn_txt">SUBMIT</string>
+    <string name="employee_button_txt">EMPLOYEE</string>
+    <string name="third_party_txt">THIRD PARTY</string>
 </resources>

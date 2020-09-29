@@ -5,4 +5,9 @@
     <dimen name="font_size_h1">15sp</dimen>
     <dimen name="font_size_h2">13sp</dimen>
     <dimen name="cnt_font_size">25sp</dimen>
+    <dimen name="btn_text_size">18sp</dimen>
+    <dimen name="heading_text_size">20sp</dimen>
+    <dimen name="sub_heading_text_size">22sp</dimen>
+    <dimen name="answer_text_size">18sp</dimen>
+    <dimen name="question_text_size">18sp</dimen>
 </resources>

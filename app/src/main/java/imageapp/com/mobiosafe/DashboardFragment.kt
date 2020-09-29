@@ -1,10 +1,12 @@
 package imageapp.com.mobiosafe
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.Fragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,16 @@ class DashboardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        val v:View = inflater.inflate(R.layout.fragment_dashboard, container, false)
+
+        val gateBtn: Button = v.findViewById<Button>(R.id.gate_entry)
+        gateBtn.setOnClickListener { v ->
+            val intent = Intent(v.context, GateEntryActivity::class.java)
+            startActivity(intent)
+        }
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+        return v
     }
 
     companion object {

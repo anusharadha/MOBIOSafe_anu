@@ -22,4 +22,35 @@
         <item name="colorAccent">#FF4081</item>
     </style>
 
+    <style name="button_text_style">
+        <item name = "android:textColor">@color/colorWhite</item>
+        <item name = "android:textSize">@dimen/btn_text_size</item>
+        <item name = "android:background">@drawable/button_rectangle</item>
+    </style>
+
+    <style name="heading_text_style">
+        <item name="android:textSize">@dimen/heading_text_size</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textScaleX">5</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="sub_heading_text_style">
+        <item name="android:textSize">@dimen/sub_heading_text_size</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="question_text_style">
+        <item name="android:textSize">@dimen/question_text_size</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="answer_text_style">
+        <item name="android:textSize">@dimen/answer_text_size</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
 </resources>
